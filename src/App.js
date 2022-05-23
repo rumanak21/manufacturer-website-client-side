@@ -1,9 +1,12 @@
 import './App.css';
+import Footer from './pages/Shared/Footer/Footer';
+import Header from './pages/Shared/Header/Header';
 
 function App() {
   return (
     <div>
-      <h1>Home</h1>
+      <Header></Header>
+      <Footer></Footer>
     </div>
   );
 }
