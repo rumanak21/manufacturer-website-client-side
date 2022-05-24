@@ -2,7 +2,7 @@ import React from 'react';
 
 const HeroSection = () => {
     return (
-        <div class="hero min-h-screen bg-base-200 margin=0">
+        <div class="hero m-10 bg-base-200 margin=0">
             <div class="hero-content flex-col lg:flex-row-reverse">
                 <img src="https://www.powertoolsuk.co.uk/media/catalog/product/cache/94a3e057056f6e2e92c241d8127151dc/b/o/bosch_gas35hafc_dust_extractor_power_tools_uk_0321_hero_1.jpg" />
                 <div>
