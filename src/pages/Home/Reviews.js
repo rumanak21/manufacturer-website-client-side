@@ -2,7 +2,9 @@ import React from 'react';
 
 const Reviews = () => {
     return (
-        <div className='flex flex-raw'>
+        <div>
+            <h1 className='text-center text-success text-4xl text-extrabold font-extrabold'>Reviews</h1>
+            <div className='flex flex-raw'>
                 <div class="card w-96 bg-base-100 shadow-xl">
                     <figure class="px-10 pt-10">
                         <div class="w-24 mask mask-hexagon">
@@ -64,8 +66,9 @@ const Reviews = () => {
                     </div>
                 </div>
 
-                
+
             </div>
+        </div>
     );
 };
 
