@@ -11,6 +11,8 @@ const Banner = () => {
         <img src={banner1} class="w-full" /> /
         <div class="absolute flex justify-between transform -translate-y-1/2 left-5 right-5 top-1/2">
           <a href="#slide4" class="btn btn-circle">❮</a>
+          <h1 className='text-white font-semi-bold text-5xl '>Welcome to Electric Tools Manufacturer
+          </h1>
           <a href="#slide2" class="btn btn-circle">❯</a>
         </div>
       </div>
@@ -18,6 +20,8 @@ const Banner = () => {
         <img src={banner2} class="w-full" /> /
         <div class="absolute flex justify-between transform -translate-y-1/2 left-5 right-5 top-1/2">
           <a href="#slide1" class="btn btn-circle">❮</a>
+          <h1 className='text-white font-semi-bold text-5xl '>You Will Find Here What You Need.
+          </h1>
           <a href="#slide3" class="btn btn-circle">❯</a>
         </div>
       </div>
@@ -25,6 +29,8 @@ const Banner = () => {
         <img src={banner3} class="w-full" /> /
         <div class="absolute flex justify-between transform -translate-y-1/2 left-5 right-5 top-1/2">
           <a href="#slide2" class="btn btn-circle">❮</a>
+          <h1 className='text-white font-semi-bold text-5xl '>All Electric Tools.
+          </h1>
           <a href="#slide4" class="btn btn-circle">❯</a>
         </div>
       </div>
@@ -32,6 +38,8 @@ const Banner = () => {
         <img src={banner4} class="w-full" /> /
         <div class="absolute flex justify-between transform -translate-y-1/2 left-5 right-5 top-1/2">
           <a href="#slide3" class="btn btn-circle">❮</a>
+          <h1 className='text-white font-semi-bold text-5xl '>Reasonable Price.
+          </h1>
           <a href="#slide1" class="btn btn-circle">❯</a>
         </div>
       </div>
