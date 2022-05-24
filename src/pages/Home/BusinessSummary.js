@@ -1,4 +1,8 @@
 import React from 'react';
+import cart from './../../img/icon/cart.png'
+import clients from './../../img/icon/clients.png'
+import feedback from './../../img/icon/feedback.png'
+import world from './../../img/icon/world.png'
 
 const BusinessSummary = () => {
     return (
@@ -9,7 +13,7 @@ const BusinessSummary = () => {
 
                     <div class="card-body items-center font-semibold text-neutral">
                         <div class="w-24 mask mask-squircle">
-                            <img src="https://cdn-icons-png.flaticon.com/512/2947/2947656.png" alt="" />
+                            <img src={world} alt="" />
                         </div>
                         <p>50</p>
                         <p>Countries</p>
@@ -19,7 +23,7 @@ const BusinessSummary = () => {
                 <div className='card w-96'>
                     <div class="card-body items-center text-center font-semibold text-neutral">
                         <div class="w-24 mask mask-squircle">
-                            <img src="https://cdn-icons.flaticon.com/png/512/2672/premium/2672909.png?token=exp=1653361954~hmac=568a0e4df4811b6f3bc73da28dcf7410" alt="" />
+                            <img src={cart} alt="" />
                         </div>
 
                         <p>200+</p>
@@ -30,7 +34,7 @@ const BusinessSummary = () => {
                 <div className='card w-96'>
                     <div class="card-body items-center text-center font-semibold text-neutral">
                         <div class="w-24 mask mask-squircle">
-                            <img src="https://cdn-icons-png.flaticon.com/512/4149/4149881.png" alt="" />
+                            <img src={clients} alt="" />
                         </div>
 
                         <p>150+</p>
@@ -41,7 +45,7 @@ const BusinessSummary = () => {
                 <div className='card w-96'>
                     <div class="card-body items-center text-center font-semibold text-neutral">
                         <div class="w-24 mask mask-squircle">
-                            <img src="https://cdn-icons.flaticon.com/png/512/2839/premium/2839162.png?token=exp=1653362119~hmac=a6834a41455a2658488f5119c4dbda35" alt="" />
+                            <img src={feedback} alt="" />
                         </div>
 
                         <p>170+</p>
