@@ -2,10 +2,10 @@ import React from 'react';
 
 const Reviews = () => {
     return (
-        <div>
+        <div className='flex flex-col items-center mb-10'>
             <h1 className='text-center text-success text-4xl text-extrabold font-extrabold'>Reviews</h1>
-            <div className='flex flex-raw'>
-                <div class="card w-96 bg-base-100 shadow-xl">
+            <div className='flex md:flex-col lg:flex-row align-items-center justify-center'>
+                <div class="card w-50  bg-base-100 shadow-xl m-2">
                     <figure class="px-10 pt-10">
                         <div class="w-24 mask mask-hexagon">
                             <img src="https://randomuser.me/api/portraits/men/21.jpg" />
@@ -17,7 +17,7 @@ const Reviews = () => {
 
                     </div>
                 </div>
-                <div class="card w-96 bg-base-100 shadow-xl">
+                <div class="card w-50  bg-base-100 shadow-xl m-2">
                     <figure class="px-10 pt-10">
                         <div class="w-24 mask mask-hexagon">
                             <img src="https://randomuser.me/api/portraits/men/33.jpg" />
@@ -29,7 +29,7 @@ const Reviews = () => {
 
                     </div>
                 </div>
-                <div class="card w-96 bg-base-100 shadow-xl">
+                <div class="card w-50  bg-base-100 shadow-xl m-2">
                     <figure class="px-10 pt-10">
                         <div class="w-24 mask mask-hexagon">
                             <img src="https://randomuser.me/api/portraits/men/20.jpg" />
@@ -41,7 +41,7 @@ const Reviews = () => {
 
                     </div>
                 </div>
-                <div class="card w-96 bg-base-100 shadow-xl">
+                <div class="card w-50  bg-base-100 shadow-xl m-2">
                     <figure class="px-10 pt-10">
                         <div class="w-24 mask mask-hexagon">
                             <img src="https://randomuser.me/api/portraits/men/31.jpg" />
@@ -53,7 +53,7 @@ const Reviews = () => {
 
                     </div>
                 </div>
-                <div class="card w-96 bg-base-100 shadow-xl">
+                <div class="card w-50 bg-base-100 shadow-xl m-2">
                     <figure class="px-10 pt-10">
                         <div class="w-24 mask mask-hexagon">
                             <img src="https://randomuser.me/api/portraits/men/83.jpg" />
