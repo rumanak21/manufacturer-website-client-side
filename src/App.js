@@ -8,7 +8,7 @@ import SignUp from './pages/Login/SignUp';
 
 function App() {
   return (
-    <div>
+    <div className='bg-zinc-100 '>
       <Header></Header>
       <Routes>
         <Route path="/" element={<Home />} />
