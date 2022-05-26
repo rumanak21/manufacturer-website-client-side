@@ -18,10 +18,11 @@ const Header = () => {
         {
             user && <li><Link to="blog">Dashboard</Link></li>
         }
-        <li><Link to="blog">About Us</Link></li>
+        <li><Link to="allproducts">Products</Link></li>
         <li><Link to="blog">Blogs</Link></li>
-        <li><Link to="blog">Portfolio</Link></li>
-        <li><Link to="blog">Products</Link></li>
+        <li><Link to="blog">About Us</Link></li>
+        <li><Link to="portfolio">Portfolio</Link></li>
+        
 
 
 
