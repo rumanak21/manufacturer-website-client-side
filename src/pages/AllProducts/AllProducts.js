@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react';
 
+
 const AllProducts = () => {
     const [products, setProducts] = useState([])
     useEffect(() => {
@@ -7,6 +8,7 @@ const AllProducts = () => {
             .then(res => res.json())
             .then(data => setProducts(data))
     }, [])
+
     return (
         <div className='grid grid-cols-3 m-10'>
 
