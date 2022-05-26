@@ -7,6 +7,7 @@ import Login from './pages/Login/Login';
 import SignUp from './pages/Login/SignUp';
 import AllProducts from './pages/AllProducts/AllProducts';
 import PageNotFound from './pages/PageNotFound/PageNotFound';
+import Purchase from './pages/AllProducts/Purchase';
 
 function App() {
   return (
@@ -17,7 +18,7 @@ function App() {
         <Route path="/login" element={<Login />} />
         <Route path="/signup" element={<SignUp />} />
         <Route path="/allproducts" element={<AllProducts />} />
-        <Route path="/purchase" element={<AllProducts />} />
+        <Route path="/purchase/:id" element={<Purchase />} />
         <Route path="*" element={<PageNotFound />} />
       </Routes>
 

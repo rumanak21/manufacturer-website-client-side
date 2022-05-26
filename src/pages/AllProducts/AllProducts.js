@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from 'react';
+import { Link, useNavigate } from 'react-router-dom';
 
 
 const AllProducts = () => {
@@ -8,6 +9,7 @@ const AllProducts = () => {
             .then(res => res.json())
             .then(data => setProducts(data))
     }, [])
+    const navigate = useNavigate()
 
     return (
         <div className='grid grid-cols-3 m-10'>
@@ -23,7 +25,7 @@ const AllProducts = () => {
                 <p>Available Products: {p.availableproduct}/ Piece</p>
                 <p>Price: {p.price}/ Piece</p>
                 <div class="card-actions">
-                    <button class="btn btn-success">Buy Now </button>
+                <Link to={`/purchase/${p._id}`} ><button class="btn btn-success">Buy Now </button></Link>
                 </div>
             </div>
         </div>)}
