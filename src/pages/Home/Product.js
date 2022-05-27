@@ -12,7 +12,7 @@ const Product = () => {
     return (
         <section className=''>
             <h2 className='text-center text-success text-4xl font-bold p-10'>Electric Tools {product.length} </h2>
-            <div className='grid grid-cols-3 place-items-center	'>
+            <div className='grid lg:grid-cols-3 place-items-center	'>
 
                 {product.slice(0,3).map(p => <div class="card w-96 bg-base-100 shadow-xl mb-10">
                     <figure class="px-10 pt-10">

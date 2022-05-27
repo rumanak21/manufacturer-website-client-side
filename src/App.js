@@ -8,7 +8,8 @@ import SignUp from './pages/Login/SignUp';
 import AllProducts from './pages/AllProducts/AllProducts';
 import PageNotFound from './pages/PageNotFound/PageNotFound';
 import Purchase from './pages/AllProducts/Purchase';
-import Dashboard from './pages/Home/Dashboard';
+import Dashboard from './pages/Dashboard/Dashboard';
+import Users from './pages/Dashboard/Users';
 
 function App() {
   return (
@@ -16,13 +17,19 @@ function App() {
       <Header></Header>
       <Routes>
         <Route path="/" element={<Home />} />
-        <Route path="/dashboard" element={< Dashboard/>} />
-        
         <Route path="/allproducts" element={<AllProducts />} />
         <Route path="/purchase/:id" element={<Purchase />} />
         <Route path="/login" element={<Login />} />
         <Route path="/signup" element={<SignUp />} />
         <Route path="*" element={<PageNotFound />} />
+
+
+<Route path='/dashboard' element={<Dashboard></Dashboard>}>
+  <Route path='users' element={<Users></Users>}></Route>
+
+</Route>
+
+
       </Routes>
 
       <Footer></Footer>

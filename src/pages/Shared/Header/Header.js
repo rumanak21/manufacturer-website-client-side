@@ -3,6 +3,8 @@ import { Link } from 'react-router-dom';
 import { useAuthState } from 'react-firebase-hooks/auth';
 import { signOut } from 'firebase/auth';
 import auth from '../../../firebase.init';
+import logo from '../../../img/logo.png'
+import src from 'daisyui';
 
 const Header = () => {
 
@@ -41,7 +43,7 @@ const Header = () => {
                         {menuitems}
                     </ul>
                 </div>
-                <Link to="/" class="btn btn-ghost normal-case text-xl">Electric Tools Manufacturer
+                <Link to="/" class="btn btn-ghost normal-case text-xl"> <img src={logo} alt="" />
                 </Link>
             </div>
             <div class="navbar-center hidden lg:flex">
