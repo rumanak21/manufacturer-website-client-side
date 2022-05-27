@@ -1,72 +1,31 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
+import { Link } from 'react-router-dom';
+import Review from './Review';
 
 const Reviews = () => {
+
+    const [reviews, setReviews] = useState([]);
+
+    useEffect(() => {
+        fetch('http://localhost:5000/review')
+            .then(res => res.json())
+            .then(data => setReviews(data))
+    }, [])
+
     return (
-        <div className='flex flex-col items-center mb-10'>
-            <h1 className='text-center text-success text-4xl text-extrabold font-extrabold'>Reviews</h1>
-            <div className='flex md:flex-col lg:flex-row align-items-center justify-center'>
-                <div class="card w-50  bg-base-100 shadow-xl m-2">
-                    <figure class="px-10 pt-10">
-                        <div class="w-24 mask mask-hexagon">
-                            <img src="https://randomuser.me/api/portraits/men/21.jpg" />
-                        </div>
-                    </figure>
-                    <div class="card-body items-center text-center">
-                        <h2 class="card-title">Jo Smith</h2>
-                        <p>If a dog chews shoes whose shoes does he choose?</p>
+        <div className='my-28 container'>
+            <h2 className='text-center m-10 text-3xl uppercase font-bold text-headText'>What our Customers are saying: </h2>
 
-                    </div>
-                </div>
-                <div class="card w-50  bg-base-100 shadow-xl m-2">
-                    <figure class="px-10 pt-10">
-                        <div class="w-24 mask mask-hexagon">
-                            <img src="https://randomuser.me/api/portraits/men/33.jpg" />
-                        </div>
-                    </figure>
-                    <div class="card-body items-center text-center">
-                        <h2 class="card-title">Henry Mclaughlin</h2>
-                        <p>If a dog chews shoes whose shoes does he choose?</p>
-
-                    </div>
-                </div>
-                <div class="card w-50  bg-base-100 shadow-xl m-2">
-                    <figure class="px-10 pt-10">
-                        <div class="w-24 mask mask-hexagon">
-                            <img src="https://randomuser.me/api/portraits/men/20.jpg" />
-                        </div>
-                    </figure>
-                    <div class="card-body items-center text-center">
-                        <h2 class="card-title">Corey Weber</h2>
-                        <p>If a dog chews shoes whose shoes does he choose?</p>
-
-                    </div>
-                </div>
-                <div class="card w-50  bg-base-100 shadow-xl m-2">
-                    <figure class="px-10 pt-10">
-                        <div class="w-24 mask mask-hexagon">
-                            <img src="https://randomuser.me/api/portraits/men/31.jpg" />
-                        </div>
-                    </figure>
-                    <div class="card-body items-center text-center">
-                        <h2 class="card-title">Noel Thompson</h2>
-                        <p>If a dog chews shoes whose shoes does he choose?</p>
-
-                    </div>
-                </div>
-                <div class="card w-50 bg-base-100 shadow-xl m-2">
-                    <figure class="px-10 pt-10">
-                        <div class="w-24 mask mask-hexagon">
-                            <img src="https://randomuser.me/api/portraits/men/83.jpg" />
-                        </div>
-                    </figure>
-                    <div class="card-body items-center text-center">
-                        <h2 class="card-title">Pat Drake</h2>
-                        <p>If a dog chews shoes whose shoes does he choose?</p>
-
-                    </div>
-                </div>
-
-
+            <div className='grid sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10'>
+                {
+                    reviews.slice(0, 3).map(review => <Review
+                        key={review._id}
+                        review={review}
+                    ></Review>)
+                }
+            </div>
+            <div className='flex justify-center mt-10'>
+                <Link to="/reviews"><button className="btn btn-wide btn-outline btn-accent uppercase font-bold text-xl">All Reviews</button></Link>
             </div>
         </div>
     );
