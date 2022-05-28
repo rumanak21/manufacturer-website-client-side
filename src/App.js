@@ -12,6 +12,9 @@ import Dashboard from './pages/Dashboard/Dashboard';
 import Users from './pages/Dashboard/Users';
 import 'react-toastify/dist/ReactToastify.css';
 import { ToastContainer } from 'react-toastify';
+import AddTools from './pages/Dashboard/AddTools';
+import AddReview from './pages/Dashboard/AddReview';
+import Profile from './pages/Dashboard/Profile';
 
 function App() {
   return (
@@ -28,6 +31,9 @@ function App() {
 
 <Route path='/dashboard' element={<Dashboard></Dashboard>}>
   <Route path='users' element={<Users></Users>}></Route>
+  <Route path='addTools' element={<AddTools></AddTools>}></Route>
+  <Route path='addReview' element={<AddReview></AddReview>}></Route>
+  <Route path='profile' element={<Profile></Profile>}></Route>
 
 </Route>
 
