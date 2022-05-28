@@ -19,6 +19,8 @@ import ManageTools from './pages/Dashboard/ManageTools';
 import ManageOrders from './pages/Dashboard/ManageOrders';
 import MyOrders from './pages/Dashboard/MyOrders';
 import Payment from './pages/Dashboard/Payment';
+import Blogs from './pages/Blogs/Blogs';
+import Portfolio from './pages/Portfolio/Portfolio';
 
 function App() {
   return (
@@ -30,6 +32,9 @@ function App() {
         <Route path="/purchase/:id" element={<Purchase />} />
         <Route path="/login" element={<Login />} />
         <Route path="/signup" element={<SignUp />} />
+        <Route path='/blogs' element={<Blogs></Blogs>}></Route>
+        <Route path='/portfolio' element={<Portfolio></Portfolio>}></Route>
+
         <Route path="*" element={<PageNotFound />} />
         
 

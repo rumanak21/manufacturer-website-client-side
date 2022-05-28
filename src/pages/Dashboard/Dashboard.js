@@ -11,13 +11,13 @@ const Dashboard = () => {
 
     return (
         <div className="drawer drawer-mobile">
-            <input id="dashboard-sidebar" type="checkbox" className="drawer-toggle" />
-            <div className="drawer-content mt-10 ml-10">
+            <input id="my-drawer-2" type="checkbox" className="drawer-toggle" />
+            <div className="drawer-content flex flex-col mt-10 ml-10">
                 <h2 className='text-3xl font-bold text-slate-900 uppercase font-mono'>Hello, {user?.displayName} It's Your Dashboard!</h2>
                 <Outlet></Outlet>
             </div>
             <div className="drawer-side">
-                <label htmlFor="dashboard-sidebar" className="drawer-overlay"></label>
+                <label htmlFor="my-drawer-2" className="drawer-overlay"></label>
                 <ul className="menu p-4 overflow-y-auto w-60 bg-slate-200 rounded text-slate-900 font-bold uppercase">
                     {!admin && <>
                         <li className='hover:bg-accent hover:text-white'><Link to="/dashboard/myOrders">My All Orders</Link></li>

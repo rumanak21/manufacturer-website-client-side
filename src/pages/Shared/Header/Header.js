@@ -20,14 +20,20 @@ const Header = () => {
         {
             user && <li><Link to="dashboard">Dashboard</Link></li>
         }
+
         <li><Link to="/allproducts">Products</Link></li>
-        <li><Link to="/blog">Blogs</Link></li>
+        <li><Link to="/blogs">Blogs</Link></li>
         <li><Link to="/about">About Us</Link></li>
         <li><Link to="/portfolio">Portfolio</Link></li>
-        
 
+        {user ? <button className="btn btn-active btn-ghost " onClick={logout} >Sign Out</button> : <>
 
+                   
+                        <Link to="/login" class="btn btn-ghost normal-case text-bold" >Login</Link>
+                        <Link to="/signup" class="btn btn-ghost normal-case text-bold" >Sign Up</Link>
+                    
 
+                </>}
 
     </>
 
@@ -43,25 +49,23 @@ const Header = () => {
                         {menuitems}
                     </ul>
                 </div>
+
+
                 <Link to="/" class="btn btn-ghost normal-case text-xl"> <img src={logo} alt="" />
                 </Link>
+
+                <div className='dropdown dropdown-end'>
+                <label for="my-drawer-2" class="btn btn-success btn-sm drawer-button lg:hidden" tabindex="0" class="btn btn-ghost lg:hidden">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h8m-8 6h16" /></svg>
+                    </label>
+                </div>
+
+
             </div>
-            <div class="navbar-center hidden lg:flex">
+            <div class="navbar-end hidden lg:flex">
                 <ul class="menu menu-horizontal p-0">
                     {menuitems}
                 </ul>
-            </div>
-            <div class="navbar-end ">
-
-                {user ? <button className="btn btn-active btn-ghost " onClick={logout} >Sign Out</button> : <>
-
-                   
-                        <Link to="/login" class="btn btn-ghost normal-case text-bold" >Login</Link>
-                        <Link to="/signup" class="btn btn-ghost normal-case text-bold" >Sign Up</Link>
-                    
-
-                </>}
-
             </div>
         </div>
     );
