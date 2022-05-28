@@ -1,7 +1,6 @@
 import React from 'react';
-import { toast } from 'react-toastify';
 
-const ManageOrder = ({ product, index, refetch, setDeletingProducts }) => {
+const ManageOrder = ({ product, index, refetch }) => {
     const { name, phone, img, email, quantity } = product;
 
     return (
@@ -17,7 +16,7 @@ const ManageOrder = ({ product, index, refetch, setDeletingProducts }) => {
             <td>{phone}</td>
             <td>{quantity}</td>
             <td>
-                <label onClick={() => setDeletingProducts(product)} htmlFor="delete-confirm-modal" className="btn btn-sm btn-accent">Delete</label>
+                <label htmlFor="delete-confirm-modal" className="btn btn-sm btn-accent">Delete</label>
             </td>
         </tr>
     );

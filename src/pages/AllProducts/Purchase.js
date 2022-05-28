@@ -4,13 +4,18 @@ import { useQuery } from 'react-query';
 import { Link, useParams } from 'react-router-dom';
 import { toast } from 'react-toastify';
 import Loading from '../Shared/Loading';
+import { useAuthState } from 'react-firebase-hooks/auth';
+import auth from '../../firebase.init';
 
 
 const Purchase = () => {
+    const [user] = useAuthState(auth);
     const { id } = useParams();
     const [product, setProducts] = useState([]);
+
     const min =`${product.minorder}`
     const max =`${product.availableproduct}`
+
     useEffect(() => {
         const url = `http://localhost:5000/tools/${id}`;
 
@@ -27,11 +32,32 @@ const Purchase = () => {
             quantity: data.quantity,
             img: product.picture
         }
+        console.log(product.price)
 
-       
-        console.log(order)
+        fetch('http://localhost:5000/order', {
+            method: 'POST',
+            headers: {
+                'content-type': 'application/json',
+                authorization: `Bearer ${localStorage.getItem('accessToken')}`
+            },
+            body: JSON.stringify(order)
+
+        })
+            .then(res => res.json())
+            .then(inserted => {
+                if (inserted.insertedId) {
+                    toast.success('Purchase successfully')
+                    reset();
+                }
+                else {
+                    toast.error('Failed to Purchase');
+                }
+            })
 
     }
+  
+<Loading></Loading>
+    
 
     const { register, formState: { errors }, handleSubmit, reset } = useForm();
 
@@ -56,7 +82,8 @@ const Purchase = () => {
                         </label>
                         <input
                             type="text"
-                            placeholder="Enter Your Name"
+                            // placeholder="Enter Your Name"
+                            value={user.displayName}
                             className="input input-bordered w-full max-w-xs"
                             {...register("name", {
                                 required: {
@@ -77,7 +104,8 @@ const Purchase = () => {
                         </label>
                         <input
                             type="text"
-                            placeholder="Enter Your Email Address"
+                            // placeholder="Enter Your Email Address"
+                            value={user.email}
                             className="input input-bordered w-full max-w-xs"
                             {...register("email", {
                                 required: {

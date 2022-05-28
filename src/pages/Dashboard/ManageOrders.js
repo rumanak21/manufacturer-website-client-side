@@ -1,16 +1,13 @@
 import React, { useState } from 'react';
 import { useQuery } from 'react-query';
 import Loading from '../Shared/Loading';
-import DeleteConfirmModal from './DeleteConfirmModal';
-import ManageOrderAdmin from './ManageOrderAdmin';
+import ManageOrder from './ManageOrder';
 
 
 
 const ManageOrders = () => {
 
-    const [deletingProducts, setDeletingProducts] = useState(null);
-
-    const { data: products, isLoading, refetch } = useQuery('orders', () => fetch('https://gentle-hamlet-26508.herokuapp.com/order', {
+    const { data: products, isLoading, refetch } = useQuery('orders', () => fetch('http://localhost:5000/order', {
 
         headers: {
             authorization: `Bearer ${localStorage.getItem('accessToken')}`
@@ -42,23 +39,16 @@ const ManageOrders = () => {
                     </thead>
                     <tbody>
                         {
-                            products.map((product, index) => <ManageOrderAdmin
+                            products.map((product, index) => <ManageOrder
                                 key={product._id}
                                 product={product}
                                 index={index}
                                 refetch={refetch}
-                                setDeletingProducts={setDeletingProducts}
-                            ></ManageOrderAdmin>)
+                            ></ManageOrder>)
                         }
                     </tbody>
                 </table>
             </div>
-            {deletingProducts && <DeleteConfirmModal
-                deletingProducts={deletingProducts}
-                refetch={refetch}
-                setDeletingProducts={setDeletingProducts}
-            ></DeleteConfirmModal>}
-
         </div>
     );
 };
