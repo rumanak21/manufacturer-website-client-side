@@ -145,7 +145,7 @@ const Purchase = () => {
                         <input
                             type="number"
                           
-                            placeholder="Minimum 100 Max 500"
+                            placeholder={`Minimum Order ${product.minorder} Piece.`}
                             className="input input-bordered w-full max-w-xs"
                             {...register("quantity", { 
 

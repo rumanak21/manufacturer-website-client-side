@@ -57,90 +57,92 @@ const AddReview = () => {
     }
 
     return (
-        <div>
-            <h2 className="text-2xl mb-5 mt-5 font-bold uppercase text-accent">Add a New Review </h2>
-            <form onSubmit={handleSubmit(onSubmit)}>
+        <div className='mx-auto'>
+            <div>
+                <h2 className="text-2xl mb-5 mt-5 font-bold uppercase text-accent">Add a New Review </h2>
+                <form onSubmit={handleSubmit(onSubmit)}>
 
-                <div className="form-control w-full max-w-xs">
-                    <label className="label">
-                        <span className="label-text">Name</span>
-                    </label>
-                    <input
-                        type="text"
-                        placeholder="Your Name"
-                        className="input input-bordered w-full max-w-xs"
-                        {...register("name", {
-                            required: {
-                                value: true,
-                                message: 'Name is Required'
-                            }
-                        })}
-                    />
-                    <label className="label">
-                        {errors.name?.type === 'required' && <span className="label-text-alt text-red-500">{errors.name.message}</span>}
-                    </label>
-                </div>
-                <div className="form-control w-full max-w-xs">
-                    <label className="label">
-                        <span className="label-text">Review Content</span>
-                    </label>
-                    <input
-                        type="text"
-                        placeholder="Type Here"
-                        className="input input-bordered w-full max-w-xs"
-                        {...register("description", {
-                            required: {
-                                value: true,
-                                message: 'Content is Required'
-                            }
-                        })}
-                    />
-                    <label className="label">
-                        {errors.description?.type === 'required' && <span className="label-text-alt text-red-500">{errors.description.message}</span>}
-                    </label>
-                </div>
-                <div className="form-control w-full max-w-xs">
-                    <label className="label">
-                        <span className="label-text">Star</span>
-                    </label>
-                    <input
-                        type="text"
-                        placeholder="Review Value"
-                        className="input input-bordered w-full max-w-xs"
-                        {...register("rating", {
-                            required: {
-                                value: true,
-                                message: 'Review Value is Required'
-                            }
-                        })}
-                    />
-                    <label className="label">
-                        {errors.rating?.type === 'required' && <span className="label-text-alt text-red-500">{errors.rating.message}</span>}
-                    </label>
-                </div>
+                    <div className="form-control w-full max-w-xs">
+                        <label className="label">
+                            <span className="label-text">Name</span>
+                        </label>
+                        <input
+                            type="text"
+                            placeholder="Your Name"
+                            className="input input-bordered w-full max-w-xs"
+                            {...register("name", {
+                                required: {
+                                    value: true,
+                                    message: 'Name is Required'
+                                }
+                            })}
+                        />
+                        <label className="label">
+                            {errors.name?.type === 'required' && <span className="label-text-alt text-red-500">{errors.name.message}</span>}
+                        </label>
+                    </div>
+                    <div className="form-control w-full max-w-xs">
+                        <label className="label">
+                            <span className="label-text">Review Content</span>
+                        </label>
+                        <input
+                            type="text"
+                            placeholder="Type Here"
+                            className="input input-bordered w-full max-w-xs"
+                            {...register("description", {
+                                required: {
+                                    value: true,
+                                    message: 'Content is Required'
+                                }
+                            })}
+                        />
+                        <label className="label">
+                            {errors.description?.type === 'required' && <span className="label-text-alt text-red-500">{errors.description.message}</span>}
+                        </label>
+                    </div>
+                    <div className="form-control w-full max-w-xs">
+                        <label className="label">
+                            <span className="label-text">Star</span>
+                        </label>
+                        <input
+                            type="text"
+                            placeholder="Review Value"
+                            className="input input-bordered w-full max-w-xs"
+                            {...register("rating", {
+                                required: {
+                                    value: true,
+                                    message: 'Review Value is Required'
+                                }
+                            })}
+                        />
+                        <label className="label">
+                            {errors.rating?.type === 'required' && <span className="label-text-alt text-red-500">{errors.rating.message}</span>}
+                        </label>
+                    </div>
 
 
-                <div className="form-control w-full max-w-xs">
-                    <label className="label">
-                        <span className="label-text">Your Photo</span>
-                    </label>
-                    <input
-                        type="file"
-                        className="input input-bordered w-full max-w-xs"
-                        {...register("image", {
-                            required: {
-                                value: true,
-                                message: 'Image is Required'
-                            }
-                        })}
-                    />
-                    <label className="label">
-                        {errors.img?.type === 'required' && <span className="label-text-alt text-red-500">{errors.img.message}</span>}
-                    </label>
-                </div>
+                    <div className="form-control w-full max-w-xs">
+                        <label className="label">
+                            <span className="label-text">Your Photo</span>
+                        </label>
+                        <input
+                            type="file"
+                            className="input input-bordered w-full max-w-xs"
+                            {...register("image", {
+                                required: {
+                                    value: true,
+                                    message: 'Image is Required'
+                                }
+                            })}
+                        />
+                        <label className="label">
+                            {errors.img?.type === 'required' && <span className="label-text-alt text-red-500">{errors.img.message}</span>}
+                        </label>
+                    </div>
 
-                <input className='btn btn-accent w-full max-w-xs text-white' type="submit" value="Add" />
-            </form>
+                    <input className='btn btn-accent w-full max-w-xs text-white' type="submit" value="Add" />
+                </form>
+            </div>
         </div>
     );
 };

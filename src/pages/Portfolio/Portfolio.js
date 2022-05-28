@@ -31,14 +31,11 @@ const Portfolio = () => {
                 <br />
 
                 <div className='card-action mt-5'>
-                    <a href="https://computer-world-3fb97.firebaseapp.com/"> <button className='btn btn-outline'>Project 1</button> </a>
-                    <a href="https://peppy-sprinkles-9e6173.netlify.app/"> <button className='btn btn-outline'>Project 2</button></a>
-                    <a href="https://book-analysis-website-79cd17.netlify.app/"> <button className='btn btn-outline'>Project 3</button></a>
+                    <a href="https://computer-world-3fb97.firebaseapp.com/" target="blank"> <button className='btn btn-outline'>Project 1</button> </a>
+                    <a href="https://peppy-sprinkles-9e6173.netlify.app/" target="blank"> <button className='btn btn-outline'>Project 2</button></a>
+                    <a href="https://book-analysis-website-79cd17.netlify.app/" target="blank"> <button className='btn btn-outline'>Project 3</button></a>
                 </div>
-
-
-
-                <div class="card-actions mt-5"> <button  className='btn btn-outline btn-success'> Hire Me </button> </div>
+                <div class="card-actions mt-5"> <a href="https://www.linkedin.com/in/varumana/" target="blank"> <button  className='btn btn-outline btn-success'> Hire Me </button> </a> </div>
             </div>
         </div>
 
