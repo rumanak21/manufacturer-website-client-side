@@ -1,5 +1,5 @@
 import React from 'react';
-import rumana from '../../img/user.jpg'
+import rumana from '../../img/rumana.jpg'
 
 const Portfolio = () => {
 
@@ -31,9 +31,9 @@ const Portfolio = () => {
                 <br />
 
                 <div className='card-action mt-5'>
-                    <a href="#"> <button className='btn btn-outline'>Project 1</button> </a>
-                    <a href="#"> <button className='btn btn-outline'>Project 2</button></a>
-                    <a href="#"> <button className='btn btn-outline'>Project 3</button></a>
+                    <a href="https://computer-world-3fb97.firebaseapp.com/"> <button className='btn btn-outline'>Project 1</button> </a>
+                    <a href="https://peppy-sprinkles-9e6173.netlify.app/"> <button className='btn btn-outline'>Project 2</button></a>
+                    <a href="https://book-analysis-website-79cd17.netlify.app/"> <button className='btn btn-outline'>Project 3</button></a>
                 </div>
 
 
