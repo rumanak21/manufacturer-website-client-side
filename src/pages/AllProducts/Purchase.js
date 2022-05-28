@@ -1,7 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import { useForm } from 'react-hook-form';
-import { useQuery } from 'react-query';
-import { Link, useParams } from 'react-router-dom';
+import { useParams } from 'react-router-dom';
 import { toast } from 'react-toastify';
 import Loading from '../Shared/Loading';
 import { useAuthState } from 'react-firebase-hooks/auth';
@@ -30,7 +29,8 @@ const Purchase = () => {
             email: data.email,
             phone: data.phone,
             quantity: data.quantity,
-            img: product.picture
+            img: product.picture,
+            price: product.price
         }
         console.log(product.price)
 
@@ -83,7 +83,7 @@ const Purchase = () => {
                         <input
                             type="text"
                             // placeholder="Enter Your Name"
-                            value={user.displayName}
+                            value={user?.displayName}
                             className="input input-bordered w-full max-w-xs"
                             {...register("name", {
                                 required: {
@@ -105,7 +105,7 @@ const Purchase = () => {
                         <input
                             type="text"
                             // placeholder="Enter Your Email Address"
-                            value={user.email}
+                            value={user?.email}
                             className="input input-bordered w-full max-w-xs"
                             {...register("email", {
                                 required: {
@@ -145,18 +145,40 @@ const Purchase = () => {
                         <input
                             type="number"
                           
-                            placeholder={`Minimum Quantity ${product.minorder}`}
+                            placeholder="Minimum 100 Max 500"
                             className="input input-bordered w-full max-w-xs"
                             {...register("quantity", { 
-                                required: {
-                                    
-                                    value: true,
-                                    message: `You have to add minimum ${product.minorder}`
-                                }
-                            })}
+
+                                min: 100,
                             
+                                required: {
+                                    value: true,
+                                    message: 'Please add Minimum 100'
+                                },
+                            })}
                         />
-                        
+                        <label className="label">
+                        {errors.quantity?.type === 'minLength' && <span className="label-text-alt text-red-500">{errors.quantity.message}</span>}
+                            {errors.quantity?.type === 'required' && <span className="label-text-alt text-red-500">{errors.quantity.message}</span>}
+                        </label>
+                    </div>
+                    <div className="form-control w-full max-w-xs">
+                        <label className="label">
+                            <span className="label-text">Price</span>
+                        </label>
+
+                        <input
+                            disabled
+                            type="number"
+                            // placeholder={`Minimum Quantity ${product.minorder}`}
+                            value={product?.price}
+                            
+                            className="input input-bordered w-full max-w-xs"
+                            {...register("price", { 
+
+                                
+                            })}
+                        />
                         <label className="label">
                             {errors.quantity?.type === 'required' && <span className="label-text-alt text-red-500">{errors.quantity.message}</span>}
                         </label>

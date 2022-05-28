@@ -16,6 +16,9 @@ import AddTools from './pages/Dashboard/AddTools';
 import AddReview from './pages/Dashboard/AddReview';
 import Profile from './pages/Dashboard/Profile';
 import ManageTools from './pages/Dashboard/ManageTools';
+import ManageOrders from './pages/Dashboard/ManageOrders';
+import MyOrders from './pages/Dashboard/MyOrders';
+import Payment from './pages/Dashboard/Payment';
 
 function App() {
   return (
@@ -28,6 +31,7 @@ function App() {
         <Route path="/login" element={<Login />} />
         <Route path="/signup" element={<SignUp />} />
         <Route path="*" element={<PageNotFound />} />
+        
 
 
 <Route path='/dashboard' element={<Dashboard></Dashboard>}>
@@ -36,6 +40,10 @@ function App() {
   <Route path='addReview' element={<AddReview></AddReview>}></Route>
   <Route path='profile' element={<Profile></Profile>}></Route>
   <Route path='manageTools' element={<ManageTools></ManageTools>}></Route>
+  <Route path='manageOrders' element={<ManageOrders></ManageOrders>}></Route>
+  <Route path='myOrders' element={<MyOrders></MyOrders>}></Route>
+  <Route path='myOrders/payment' element={<Payment></Payment>}></Route>
+  <Route index element={<Profile></Profile>}></Route>
 
 </Route>
 

@@ -20,7 +20,7 @@ const Dashboard = () => {
                 <label htmlFor="dashboard-sidebar" className="drawer-overlay"></label>
                 <ul className="menu p-4 overflow-y-auto w-60 bg-slate-200 rounded text-slate-900 font-bold uppercase">
                     {!admin && <>
-                        <li className='hover:bg-accent hover:text-white'><Link to="/dashboard/">My All Orders</Link></li>
+                        <li className='hover:bg-accent hover:text-white'><Link to="/dashboard/myOrders">My All Orders</Link></li>
                         <li className='hover:bg-accent hover:text-white'><Link to="/dashboard/addReview">Add A Review</Link></li>
                         <li className='hover:bg-accent hover:text-white'><Link to="/dashboard/profile">My Profile</Link></li>
                     </>
@@ -29,14 +29,14 @@ const Dashboard = () => {
 
                     {admin && <>
                         <li className='hover:bg-accent hover:text-white'><Link to="/dashboard/profile">My Profile</Link></li>
-                        <li className='hover:bg-accent hover:text-white'><Link to="/dashboard/">Manage Orders</Link></li>
+                        <li className='hover:bg-accent hover:text-white'><Link to="/dashboard/manageOrders">Manage Orders</Link></li>
                         <li className='hover:bg-accent hover:text-white'><Link to="/dashboard/manageTools">Manage Tools</Link></li>
                         <li className='hover:bg-accent hover:text-white'><Link to="/dashboard/addTools">Add A Tool</Link></li>
                         <li className='hover:bg-accent hover:text-white'><Link to="/dashboard/users">Users</Link></li>
                     </>}
                 </ul>
-
             </div>
+
         </div>
     );
 };
