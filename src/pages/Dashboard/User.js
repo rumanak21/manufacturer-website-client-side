@@ -14,7 +14,7 @@ const User = ({ user, refetch }) => {
         })
             .then(res => {
                 if (res.status === 403) {
-                    toast.error('Failed to Make an admin');
+                    toast.error('Opps!! You cant Add Admin');
                 }
                 return res.json()
             })
@@ -30,10 +30,10 @@ const User = ({ user, refetch }) => {
         <tr>
             <th>1</th>
             <td>{email}</td>
-            <td>{role !== 'admin' && <button onClick={makeAdmin} className="btn btn-sm btn-outline btn-accent">Make This Admin</button>}
+            <td>{role !== 'admin' && <button onClick={makeAdmin} className="btn btn-sm btn-outline btn-accent">Make Admin</button>}
 
                 {
-                    role === 'admin' && <button className="btn btn-sm btn-outline btn-accent">Already Admin</button>
+                    role === 'admin' && <button className="btn btn-sm btn-outline btn-accent">Admin</button>
                 }
 
             </td>
