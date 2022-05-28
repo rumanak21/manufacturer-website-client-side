@@ -27,10 +27,10 @@ const Dashboard = () => {
 
                     }
 
-                    {!admin && <>
-                        <li className='hover:bg-accent hover:text-white'><Link to="/dashboard/">My Profile</Link></li>
+                    {admin && <>
+                        <li className='hover:bg-accent hover:text-white'><Link to="/dashboard/profile">My Profile</Link></li>
                         <li className='hover:bg-accent hover:text-white'><Link to="/dashboard/">Manage Orders</Link></li>
-                        <li className='hover:bg-accent hover:text-white'><Link to="/dashboard/">Manage Tools</Link></li>
+                        <li className='hover:bg-accent hover:text-white'><Link to="/dashboard/manageTools">Manage Tools</Link></li>
                         <li className='hover:bg-accent hover:text-white'><Link to="/dashboard/addTools">Add A Tool</Link></li>
                         <li className='hover:bg-accent hover:text-white'><Link to="/dashboard/users">Users</Link></li>
                     </>}

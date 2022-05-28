@@ -15,6 +15,7 @@ import { ToastContainer } from 'react-toastify';
 import AddTools from './pages/Dashboard/AddTools';
 import AddReview from './pages/Dashboard/AddReview';
 import Profile from './pages/Dashboard/Profile';
+import ManageTools from './pages/Dashboard/ManageTools';
 
 function App() {
   return (
@@ -34,6 +35,7 @@ function App() {
   <Route path='addTools' element={<AddTools></AddTools>}></Route>
   <Route path='addReview' element={<AddReview></AddReview>}></Route>
   <Route path='profile' element={<Profile></Profile>}></Route>
+  <Route path='manageTools' element={<ManageTools></ManageTools>}></Route>
 
 </Route>
 
