@@ -15,7 +15,7 @@ const ManageOrder = ({ product, index, refetch }) => {
             <td>{email}</td>
             <td>{phone}</td>
             <td>{quantity}</td>
-            <td>${quantity*price}</td>
+            <td>${quantity * price}</td>
             <td>
                 <label htmlFor="delete-confirm-modal" className="btn btn-sm btn-accent">Delete</label>
             </td>
