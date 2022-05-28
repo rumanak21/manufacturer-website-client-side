@@ -4,7 +4,7 @@ import rumana from '../../img/user.jpg'
 const Portfolio = () => {
 
     return (
-<div className='mt-10'>
+<div className='mt-10 mx-auto justify-center flex mb-10'>
             <div class="card card-side bg-base-100 shadow-xl w-8/12">
                 <figure><img className='w-[280px]' src={rumana} alt="Movie"/></figure>
 
