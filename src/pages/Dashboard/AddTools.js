@@ -6,7 +6,7 @@ import Loading from '../Shared/Loading';
 
 const AddTools = () => {
     const { register, formState: { errors }, handleSubmit, reset } = useForm();
-    const { data: products, isLoading } = useQuery('tools', () => fetch('http://localhost:5000/tools').then(res => res.json()))
+    const { data: products, isLoading } = useQuery('tools', () => fetch('https://enigmatic-escarpment-74336.herokuapp.com/tools').then(res => res.json()))
     const imageStorageKey = 'a6e339b091ff1326d242e4ab01d22313';
 
     const onSubmit = async data => {
@@ -31,7 +31,7 @@ const AddTools = () => {
                         picture: img
                     }
 
-                    fetch('http://localhost:5000/tools', {
+                    fetch('https://enigmatic-escarpment-74336.herokuapp.com/tools', {
                         method: 'POST',
                         headers: {
                             'content-type': 'application/json',

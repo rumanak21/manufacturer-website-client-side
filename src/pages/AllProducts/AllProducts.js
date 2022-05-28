@@ -5,7 +5,7 @@ import { Link, useNavigate } from 'react-router-dom';
 const AllProducts = () => {
     const [products, setProducts] = useState([])
     useEffect(() => {
-        fetch('http://localhost:5000/tools')
+        fetch('https://enigmatic-escarpment-74336.herokuapp.com/tools')
             .then(res => res.json())
             .then(data => setProducts(data))
     }, [])

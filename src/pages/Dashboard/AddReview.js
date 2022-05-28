@@ -6,7 +6,7 @@ import Loading from '../Shared/Loading';
 
 const AddReview = () => {
     const { register, formState: { errors }, handleSubmit, reset } = useForm();
-    const { data: reviews, isLoading } = useQuery('product', () => fetch('http://localhost:5000/review').then(res => res.json()))
+    const { data: reviews, isLoading } = useQuery('product', () => fetch('https://enigmatic-escarpment-74336.herokuapp.com/review').then(res => res.json()))
     const imageStorageKey = 'a6e339b091ff1326d242e4ab01d22313';
 
     const onSubmit = async data => {
@@ -29,7 +29,7 @@ const AddReview = () => {
                         img: img
                     }
 
-                    fetch('http://localhost:5000/review', {
+                    fetch('https://enigmatic-escarpment-74336.herokuapp.com/review', {
                         method: 'POST',
                         headers: {
                             'content-type': 'application/json',

@@ -16,7 +16,7 @@ const Purchase = () => {
     const max =`${product.availableproduct}`
 
     useEffect(() => {
-        const url = `http://localhost:5000/tools/${id}`;
+        const url = `https://enigmatic-escarpment-74336.herokuapp.com/tools/${id}`;
 
         fetch(url)
             .then(res => res.json())
@@ -34,7 +34,7 @@ const Purchase = () => {
         }
         console.log(product.price)
 
-        fetch('http://localhost:5000/order', {
+        fetch('https://enigmatic-escarpment-74336.herokuapp.com/order', {
             method: 'POST',
             headers: {
                 'content-type': 'application/json',

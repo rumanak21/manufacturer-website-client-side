@@ -7,7 +7,7 @@ import ManageTool from './ManageTool';
 
 const ManageTools = () => {
 
-    const { data: products, isLoading, refetch } = useQuery('tools', () => fetch('http://localhost:5000/tools', {
+    const { data: products, isLoading, refetch } = useQuery('tools', () => fetch('https://enigmatic-escarpment-74336.herokuapp.com/tools', {
         headers: {
             authorization: `Bearer ${localStorage.getItem('accessToken')}`
         }

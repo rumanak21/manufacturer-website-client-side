@@ -7,7 +7,7 @@ import ManageOrder from './ManageOrder';
 
 const ManageOrders = () => {
 
-    const { data: products, isLoading, refetch } = useQuery('orders', () => fetch('http://localhost:5000/order', {
+    const { data: products, isLoading, refetch } = useQuery('orders', () => fetch('https://enigmatic-escarpment-74336.herokuapp.com/order', {
 
         headers: {
             authorization: `Bearer ${localStorage.getItem('accessToken')}`
